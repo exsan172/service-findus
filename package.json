@@ -1,0 +1,26 @@
+{
+  "name": "service-findus",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "rimraf build && babel src --out-dir build  --copy-files",
+    "start": "node build/index.js",
+    "dev"  : "nodemon --exec babel-node src/index.js"
+  },
+  "dependencies": {
+    "express": "~4.16.1",
+    "moment-timezone": "^0.5.34",
+    "mongoose": "^6.3.8",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/node": "^7.18.5",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-object-rest-spread": "^7.18.0",
+    "@babel/preset-env": "^7.18.2",
+    "nodemon": "^2.0.16",
+    "rimraf": "^3.0.2"
+  }
+}
