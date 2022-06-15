@@ -5,4 +5,4 @@ router.get('/', function(req, res, next) {
 	res.send("kontol")
 });
 
-module.exports = router;
+export default router

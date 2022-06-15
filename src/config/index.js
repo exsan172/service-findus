@@ -16,7 +16,7 @@ export const response = (res, code, message, data=null) => {
 
 export const DatabaseConnection = async () => {
     try {
-        await mongoose.connect(process.env.DB_HOST, { useNewUrlParser: true, useUnifiedTopology: true });
+        await mongoose.connect(process.env.DB_HOST, { useNewUrlParser: true, useUnifiedTopology: true, dbName: process.env.DB_NAME });
         console.log("Database connection success.")
 
     } catch(err) {
